@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Weather App",
+  title: "Skylytics",
   description:
     "A modern weather app showing current weather conditions with a minimal and clean interface.",
 };
