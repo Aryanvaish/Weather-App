@@ -8,6 +8,7 @@ export default function BackgroundMotion() {
   const target = useRef({ x: 0.5, y: 0.5 });
   const current = useRef({ x: 0.5, y: 0.5 });
 
+  const timeRef = useRef(0);
   const [, forceRender] = useState(0);
 
   function handlePointerMove(e: React.PointerEvent) {
@@ -24,8 +25,14 @@ export default function BackgroundMotion() {
     let raf: number;
 
     const animate = () => {
-      current.current.x += (target.current.x - current.current.x) * 0.08;
-      current.current.y += (target.current.y - current.current.y) * 0.08;
+      timeRef.current += 0.003;
+
+      const driftX = Math.sin(timeRef.current) * 0.06;
+      const driftY = Math.cos(timeRef.current * 0.8) * 0.06;
+
+      current.current.x += (target.current.x + driftX - current.current.x) * 0.05;
+      current.current.y += (target.current.y + driftY - current.current.y) * 0.05;
+
       forceRender((v) => v + 1);
       raf = requestAnimationFrame(animate);
     };
@@ -54,8 +61,8 @@ export default function BackgroundMotion() {
           background:
             "radial-gradient(circle, rgba(59,130,246,0.35), rgba(59,130,246,0.05) 55%, transparent 70%)",
           transform: `translate3d(${x * 160}px, ${y * 160}px, 0) scale(1.05)`,
-          left: "8%",
-          top: "6%",
+          left: "4%",
+          top: "3%",
         }}
       />
       <div

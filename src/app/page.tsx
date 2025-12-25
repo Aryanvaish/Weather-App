@@ -1,12 +1,12 @@
 import BackgroundMotion from "@/components/BackgroundMotion";
-import Intro from "@/components/intro";
+import WeatherIntro from "@/components/WeatherIntro";
 import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   return (
     <>
-    <BackgroundMotion />
-      <Intro />
+      <BackgroundMotion />
+      <WeatherIntro />  
       <Analytics />
     </>
   );
