@@ -1,37 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌤 Skylytics
 
-## Getting Started
+Skylytics is a modern and interactive weather web app built using **Next.js**, **React**, and **Tailwind CSS**.  
+It provides real-time weather updates using device geolocation or manual search, wrapped in a clean, responsive UI with smooth motion effects.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📍 **Auto Location Detection** – Automatically fetches weather using device location.  
+🔍 **Manual Search** – Search weather by city, country, or latitude/longitude.  
+🌡 **Live Weather Data** – View accurate and up-to-date weather information including:
+- Temperature  
+- Feels like  
+- Humidity  
+- Wind speed  
+- Cloud coverage  
+- Sunrise & Sunset  
+- Visibility  
+- Min / Max temperature  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+📱 **Fully Responsive UI** – Optimized for mobile, tablet, and desktop devices.  
+⚡ **Optimized API Calls** – Prevents duplicate requests for better performance.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Next.js (App Router)** – Application framework  
+- **React** – UI rendering  
+- **TypeScript** – Type safety  
+- **Tailwind CSS** – Styling and responsiveness  
+- **Framer Motion** – Animations and transitions  
+- **OpenWeather API** – Weather data source  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🧩 How It Works
 
-## Deploy on Vercel
+1. On page load, Skylytics checks browser geolocation permission.  
+2. If permission is granted, weather data is fetched using latitude and longitude.  
+3. If permission is denied, clear instructions are shown and manual search is enabled.  
+4. Weather data is fetched from the OpenWeather API.  
+5. The UI updates instantly with smooth transitions and responsive layouts.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Weather-App
+## 🌐 Live Demo
+
+Check out the live app here: [Skylytics Live](https://aryanvaish-skylytics.vercel.app/)
+
