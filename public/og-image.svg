@@ -1,0 +1,43 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="32%" cy="30%" r="42%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Weather Icon Group -->
+  <g transform="translate(780,210)">
+    <circle cx="120" cy="70" r="70" fill="#facc15"/>
+    <path
+      d="M40 170c0-38 31-70 70-70 24 0 46 12 59 31 7-3 15-5 23-5 28 0 50 22 50 50s-22 50-50 50H100c-33 0-60-27-60-56z"
+      fill="#e5e7eb"
+      opacity="0.95"
+    />
+  </g>
+
+  <!-- Text Block -->
+  <text x="80" y="260" font-size="92" font-weight="700" fill="#ffffff" font-family="Inter, system-ui, sans-serif">
+    Skylytics
+  </text>
+
+  <text x="80" y="325" font-size="32" fill="#cbd5f5" font-family="Inter, system-ui, sans-serif">
+    Real-Time Weather · Clean UI · Smart Location
+  </text>
+
+  <text x="80" y="380" font-size="22" fill="#94a3b8" font-family="Inter, system-ui, sans-serif">
+    Accurate weather by geolocation or manual search
+  </text>
+
+  <text x="80" y="450" font-size="20" fill="#64748b" font-family="Inter, system-ui, sans-serif">
+    aryanvaish-skylytics.vercel.app
+  </text>
+</svg>

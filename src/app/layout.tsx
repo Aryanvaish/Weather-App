@@ -13,9 +13,66 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Skylytics",
+  title: {
+    default: "Skylytics – Real-Time Weather App",
+    template: "%s | Skylytics",
+  },
   description:
-    "A modern weather app showing current weather conditions with a minimal and clean interface.",
+    "Skylytics is a modern, real-time weather app that provides accurate weather details using geolocation or manual city search. Clean UI, smooth animations, and fast performance.",
+  applicationName: "Skylytics",
+  authors: [{ name: "Aryan Vaish" }],
+  generator: "Next.js",
+  keywords: [
+    "weather app",
+    "real time weather",
+    "Skylytics",
+    "weather by location",
+    "weather forecast",
+    "Next.js weather app",
+    "geolocation weather",
+    "modern weather UI",
+  ],
+  metadataBase: new URL("https://aryanvaish-skylytics.vercel.app"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Skylytics – Real-Time Weather App",
+    description:
+      "Check real-time weather using geolocation or manual search with Skylytics. Fast, minimal, and beautifully designed.",
+    url: "https://aryanvaish-skylytics.vercel.app",
+    siteName: "Skylytics",
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Skylytics – Real-Time Weather App",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Skylytics – Real-Time Weather App",
+    description:
+      "A sleek weather app with real-time data, geolocation support, and smooth animations.",
+    images: ["/og-image.svg"],
+    creator: "@aryanvaish",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  category: "technology",
 };
 
 export default function RootLayout({
@@ -25,23 +82,12 @@ export default function RootLayout({
 }>) {
   const svgFavicon = `
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-      <title>Weather App Icon</title>
-      <desc>A minimal yellow sun partly covered by a cloud, representing a weather app icon.</desc>
-      <style>
-        @media (prefers-color-scheme: dark) {
-          rect { fill: #1f2937; }
-          path { fill: #9ca3af; }
-          circle { fill: #facc15; }
-        }
-        @media (prefers-color-scheme: light) {
-          rect { fill: #f9fafb; }
-          path { fill: #d1d5db; }
-          circle { fill: #facc15; }
-        }
-      </style>
-      <rect width="64" height="64" rx="12" ry="12"/>
-      <circle cx="26" cy="26" r="10"/>
-      <path d="M42 44a8 8 0 0 0 0-16 10 10 0 0 0-19.5 2.5A6.5 6.5 0 0 0 24 44h18z"/>
+      <rect width="64" height="64" rx="12" ry="12" fill="#0f172a"/>
+      <circle cx="26" cy="26" r="10" fill="#facc15"/>
+      <path
+        d="M42 44a8 8 0 0 0 0-16 10 10 0 0 0-19.5 2.5A6.5 6.5 0 0 0 24 44h18z"
+        fill="#e5e7eb"
+      />
     </svg>
   `;
 
